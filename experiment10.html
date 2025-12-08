@@ -3,47 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    *{
-color: white;
-    }
-    div{
-        background-color: black;
-        height: 50px;
-display: inline;
-display: flex;
-justify-content: space-between;
-gap: 10px;
+    <title>Responsive Product Grid</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    } 
-    .content{
-        color:black;
-    }
-    #name{
-        gap: 5px;
-    }
-    
-    
-    
-</style>
-<body>
-    <div>
-        <div id="container"><a>ShopEase</a></div>
-       <div id="cric"> <a>Home</a>
-        <a>Products</a>
-        <a>Categories</a>
-        <a> Contact</a>
-        </div>
-      <div id="name">  <a>Cart</a>
-        <a>Login</a>   
-            </div>
-        </div>
-        <section class="content">
-            <h1>Welcome to ShopEase!</h1>
-            <p>Your one-stop destination for all shopping needs.</p>
-        </section>
+body {
+    background: #f2f2f2;
+    padding: 20px;
+}
 
-</body>
-</html>
+.container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+   
